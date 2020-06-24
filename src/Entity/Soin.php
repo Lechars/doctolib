@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\SoinRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,6 +38,22 @@ class Soin
      * @ORM\Column(type="integer")
      */
     private $duree_hospitalisation;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Hopital::class, inversedBy="soin")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $hopital;
+
+    /**
+     * @ORM\OneToMany(targetEntity=medecin::class, mappedBy="soin")
+     */
+    private $medecins;
+
+    public function __construct()
+    {
+        $this->medecins = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -86,6 +104,49 @@ class Soin
     public function setDureeHospitalisation(int $duree_hospitalisation): self
     {
         $this->duree_hospitalisation = $duree_hospitalisation;
+
+        return $this;
+    }
+
+    public function getHopital(): ?Hopital
+    {
+        return $this->hopital;
+    }
+
+    public function setHopital(?Hopital $hopital): self
+    {
+        $this->hopital = $hopital;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|medecin[]
+     */
+    public function getMedecins(): Collection
+    {
+        return $this->medecins;
+    }
+
+    public function addMedecin(medecin $medecin): self
+    {
+        if (!$this->medecins->contains($medecin)) {
+            $this->medecins[] = $medecin;
+            $medecin->setSoin($this);
+        }
+
+        return $this;
+    }
+
+    public function removeMedecin(medecin $medecin): self
+    {
+        if ($this->medecins->contains($medecin)) {
+            $this->medecins->removeElement($medecin);
+            // set the owning side to null (unless already changed)
+            if ($medecin->getSoin() === $this) {
+                $medecin->setSoin(null);
+            }
+        }
 
         return $this;
     }

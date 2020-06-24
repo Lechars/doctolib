@@ -27,6 +27,12 @@ class Medecin
      */
     private $tel;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Soin::class, inversedBy="medecins")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $soin;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -52,6 +58,18 @@ class Medecin
     public function setTel(string $tel): self
     {
         $this->tel = $tel;
+
+        return $this;
+    }
+
+    public function getSoin(): ?Soin
+    {
+        return $this->soin;
+    }
+
+    public function setSoin(?Soin $soin): self
+    {
+        $this->soin = $soin;
 
         return $this;
     }
