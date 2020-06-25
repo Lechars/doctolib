@@ -46,7 +46,7 @@ class Soin
     private $hopital;
 
     /**
-     * @ORM\OneToMany(targetEntity=medecin::class, mappedBy="soin")
+     * @ORM\OneToMany(targetEntity=Medecin::class, mappedBy="soin")
      */
     private $medecins;
 
