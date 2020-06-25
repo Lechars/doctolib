@@ -11,7 +11,7 @@ class HomeController extends AbstractController
 {
     /**
      * Home page display
-     * @Route("/",name="home_index", methods={"GET"})
+     * @Route("index",name="home_index", methods={"GET"})
      * @return Response A response instance
      */
     public function index() :Response
