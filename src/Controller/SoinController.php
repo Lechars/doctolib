@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Soin;
-use App\Form\SoinType;
+use App\Form\Soin1Type;
 use App\Repository\SoinRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -31,7 +31,7 @@ class SoinController extends AbstractController
     public function new(Request $request): Response
     {
         $soin = new Soin();
-        $form = $this->createForm(SoinType::class, $soin);
+        $form = $this->createForm(Soin1Type::class, $soin);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -63,7 +63,7 @@ class SoinController extends AbstractController
      */
     public function edit(Request $request, Soin $soin): Response
     {
-        $form = $this->createForm(SoinType::class, $soin);
+        $form = $this->createForm(Soin1Type::class, $soin);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
