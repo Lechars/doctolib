@@ -43,7 +43,7 @@ class Medecin
         return $this->nom;
     }
 
-    public function setNom(string $nil): self
+    public function setNom(string $nom): self
     {
         $this->nom = $nom;
 

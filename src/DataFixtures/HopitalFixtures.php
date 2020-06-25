@@ -29,7 +29,7 @@ class HopitalFixtures extends Fixture implements DependentFixtureInterface
 
         $manager->persist($hopital);
         $hopital->setPay($this->getReference('Thailande'));
-        $this->addReference('Boobzpital', $hopital);
+        $this->addReference('Hopital', $hopital);
 
         $manager->flush();
     }
