@@ -52,7 +52,7 @@ class Soin
 
     public function __construct()
     {
-        $this->medecins = new ArrayCollection();
+        $this->Medecins = new ArrayCollection();
     }
 
     public function getId(): ?int
