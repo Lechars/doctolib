@@ -32,12 +32,12 @@ class Soin
     /**
      * @ORM\Column(type="integer")
      */
-    private $durée_traitement;
+    private $duréeTraitement;
 
     /**
      * @ORM\Column(type="integer")
      */
-    private $duree_hospitalisation;
+    private $dureeHospitalisation;
 
     /**
      * @ORM\ManyToOne(targetEntity=Hopital::class, inversedBy="soin")
@@ -86,24 +86,24 @@ class Soin
 
     public function getDuréeTraitement(): ?int
     {
-        return $this->durée_traitement;
+        return $this->duréeTraitement;
     }
 
-    public function setDuréeTraitement(int $durée_traitement): self
+    public function setDuréeTraitement(int $duréeTraitement): self
     {
-        $this->durée_traitement = $durée_traitement;
+        $this->duréeTraitement = $duréeTraitement;
 
         return $this;
     }
 
     public function getDureeHospitalisation(): ?int
     {
-        return $this->duree_hospitalisation;
+        return $this->dureeHospitalisation;
     }
 
-    public function setDureeHospitalisation(int $duree_hospitalisation): self
+    public function setDureeHospitalisation(int $dureeHospitalisation): self
     {
-        $this->duree_hospitalisation = $duree_hospitalisation;
+        $this->dureeHospitalisation = $dureeHospitalisation;
 
         return $this;
     }
