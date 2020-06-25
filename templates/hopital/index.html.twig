@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hopital index{% endblock %}
+
+{% block body %}
+    <h1>Description</h1>
+
+
+  <tbody>
+        {% for hopital in hopitals %}
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom </th>
+                <td>{{hopital.nom}}</td>
+            </tr>
+
+            <tr>
+                <th>Adresse</th>
+                <td>{{ hopital.adresse }}</td>
+            </tr>
+
+            <tr>
+                <th>Gps</th>
+                <td>{{ hopital.gps }}</td>
+            </tr>
+
+            <tr>
+                <th>Tarif</th>
+                <td>{{ hopital.tarif }}</td>
+            </tr>
+        </thead>
+       
+           
+        {% else %}
+
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
+
