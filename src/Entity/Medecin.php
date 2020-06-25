@@ -20,7 +20,7 @@ class Medecin
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nil;
+    private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -38,14 +38,14 @@ class Medecin
         return $this->id;
     }
 
-    public function getNil(): ?string
+    public function getNom(): ?string
     {
-        return $this->nil;
+        return $this->nom;
     }
 
-    public function setNil(string $nil): self
+    public function setNom(string $nom): self
     {
-        $this->nil = $nil;
+        $this->nom = $nom;
 
         return $this;
     }

@@ -46,13 +46,13 @@ class Soin
     private $hopital;
 
     /**
-     * @ORM\OneToMany(targetEntity=medecin::class, mappedBy="soin")
+     * @ORM\OneToMany(targetEntity=Medecin::class, mappedBy="soin")
      */
     private $medecins;
 
     public function __construct()
     {
-        $this->medecins = new ArrayCollection();
+        $this->Medecins = new ArrayCollection();
     }
 
     public function getId(): ?int
