@@ -3,7 +3,7 @@
 {% block title %}Soin index{% endblock %}
 
 {% block body %}
-    <h1>Soin index</h1>
+    <h1>Prestation</h1>
 
     <table class="table">
         <thead>
@@ -26,7 +26,7 @@
                 <td>{{ soin.dureeHospitalisation }}</td>
                 <td>
                     <a href="{{ path('soin_show', {'id': soin.id}) }}">show</a>
-                    
+
                 </td>
             </tr>
         {% else %}
