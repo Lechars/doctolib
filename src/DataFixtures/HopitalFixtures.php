@@ -34,7 +34,7 @@ class HopitalFixtures extends Fixture implements DependentFixtureInterface
         $hopital = new hopital();
         $hopital->setNom('Clinique');
         $hopital->setAdresse('2 rue du bistouri');
-        $hopital->setGps('12.931941,100.9009534');
+        $hopital->setGps(' -77.0403,21.00');
         $hopital->setTarif(50);
 
         $manager->persist($hopital);
@@ -54,12 +54,22 @@ class HopitalFixtures extends Fixture implements DependentFixtureInterface
         $hopital = new hopital();
         $hopital->setNom('BoobzBuz');
         $hopital->setAdresse('2 rue du joke');
-        $hopital->setGps('9.731875299999999,100.0135929');
+        $hopital->setGps('127.122630,40.566');
         $hopital->setTarif(50);
 
         $manager->persist($hopital);
         $hopital->setPay($this->getReference('Thailande'));
         $this->addReference('BoobzBuz', $hopital);
+
+        $hopital = new hopital();
+        $hopital->setNom('NotThatUglyBut...');
+        $hopital->setAdresse('2 rue du joke');
+        $hopital->setGps('-45.290278,63.614594');
+        $hopital->setTarif(50);
+
+        $manager->persist($hopital);
+        $hopital->setPay($this->getReference('Thailande'));
+        $this->addReference('NotThatUglyBut...', $hopital);
 
         $manager->flush();
     }
