@@ -28,7 +28,7 @@ class SoinFixtures extends Fixture implements DependentFixtureInterface
         $soin->setDureeHospitalisation(4);
 
         $manager->persist($soin);
-        $soin->setHopital($this->getReference('Boobzpital'));
+        $soin->setHopital($this->getReference('Hospital'));
         $this->addReference('rétrécissement des boobz', $soin);
 
         $soin =new Soin();
@@ -38,7 +38,7 @@ class SoinFixtures extends Fixture implements DependentFixtureInterface
         $soin->setDureeHospitalisation(4);
 
         $manager->persist($soin);
-        $soin->setHopital($this->getReference('Hopital'));
+        $soin->setHopital($this->getReference('Clinique'));
         $this->addReference('Etre un Apollon', $soin);
 
         $soin =new Soin();
@@ -48,8 +48,18 @@ class SoinFixtures extends Fixture implements DependentFixtureInterface
         $soin->setDureeHospitalisation(4);
 
         $manager->persist($soin);
-        $soin->setHopital($this->getReference('Hopital'));
+        $soin->setHopital($this->getReference('Beauty Hospital'));
         $this->addReference('Etre une Apobonne', $soin);
+
+        $soin =new Soin();
+        $soin->setNom('Abdominoplastie');
+        $soin->setPrix('2300');
+        $soin->setDuréeTraitement(3);
+        $soin->setDureeHospitalisation(4);
+
+        $manager->persist($soin);
+        $soin->setHopital($this->getReference('BoobzBuz'));
+        $this->addReference('Abdominoplastie', $soin);
 
         $manager->flush();
     }

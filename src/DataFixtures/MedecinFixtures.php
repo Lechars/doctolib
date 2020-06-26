@@ -25,6 +25,27 @@ class MedecinFixtures extends Fixture implements DependentFixtureInterface
         $manager->persist($medecin);
         $medecin->setSoin($this->getReference('Agrandissement des boobz'));
 
+        $medecin = new Medecin();
+        $medecin->setNom('Sheperd');
+        $medecin->setTel('0645879812');
+
+        $manager->persist($medecin);
+        $medecin->setSoin($this->getReference('Etre une Apobonne'));
+
+        $medecin = new Medecin();
+        $medecin->setNom('Yang');
+        $medecin->setTel('0632324889');
+
+        $manager->persist($medecin);
+        $medecin->setSoin($this->getReference('rétrécissement des boobz'));
+
+        $medecin = new Medecin();
+        $medecin->setNom('Karev');
+        $medecin->setTel('0632517388');
+
+        $manager->persist($medecin);
+        $medecin->setSoin($this->getReference('Abdominoplastie'));
+
 
         $manager->flush();
     }
