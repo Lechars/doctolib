@@ -31,6 +31,16 @@ class HopitalFixtures extends Fixture implements DependentFixtureInterface
         $hopital->setPay($this->getReference('Thailande'));
         $this->addReference('Hopital', $hopital);
 
+        $hopital = new hopital();
+        $hopital->setNom('CHU');
+        $hopital->setAdresse('2 rue du bistouri');
+        $hopital->setGps('-59.6959022,-12.6589198');
+        $hopital->setTarif(50);
+
+        $manager->persist($hopital);
+        $hopital->setPay($this->getReference('Thailande'));
+        $this->addReference('CHU', $hopital);
+
         $manager->flush();
     }
 
