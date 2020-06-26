@@ -1,0 +1,6 @@
+{
+    "twig-language.compressedCss": true,
+    "emmet.includeLanguages": {
+        "twig": "html"
+    }
+}
