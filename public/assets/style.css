@@ -4,10 +4,10 @@ h1{
 	background-color: rebeccapurple;
 	justify-content: center;
 }
-
 .section {
 	position: relative;
 	height: 100vh;
+	
 	
 }
 
@@ -19,6 +19,7 @@ h1{
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	border: #090a0b 2px;
+	background-color: gray;
 }
 
 #booking {
