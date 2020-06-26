@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Carte{% endblock %}
+{% block stylesheets %}
+    <script src="/asset/openlayer/ol.js"></script>
+    <link rel="stylesheet" href="/asset/openlayer/css/carte.css">
+    <link rel="stylesheet" href="/asset/openlayer/css/ol.css">
+{% endblock %}
+
+{% block body %}
+
+    <div class="container-lg">
+        <h1>Carte des meilleurs hopitaux</h1>
+        <p>cliquez sur le nom pour afficher les informations attachées à cet hopital</p>
+        <div id="map" class="map"></div>
+    </div>
+
+    {% for hopi in hopital %}
+        <div class="ponctuel" style="display: none;">
+            <a class="label" id="label" target="_blank" href="/map/{{ hopi.id }}">{{ hopi.nom }}</a>
+            <div class = "marker" id="marker" title="Marker"></div>
+            <div class ="coord">{{ hopi.gps }}</div>
+        </div>
+    {% endfor %}
+
+
+    <script src="/asset/openlayer/hopitalLayer.js"></script>
+{% endblock %}

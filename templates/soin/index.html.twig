@@ -11,9 +11,9 @@
                 <th>Id</th>
                 <th>Nom</th>
                 <th>Prix</th>
-                <th>Durée_traitement</th>
-                <th>Duree_hospitalisation</th>
-                <th>actions</th>
+                <th>DuréeTraitement</th>
+                <th>Durée Hospitalisation</th>
+                <th>Détails</th>
             </tr>
         </thead>
         <tbody>
@@ -26,7 +26,7 @@
                 <td>{{ soin.dureeHospitalisation }}</td>
                 <td>
                     <a href="{{ path('soin_show', {'id': soin.id}) }}">show</a>
-                    <a href="{{ path('soin_edit', {'id': soin.id}) }}">edit</a>
+                    
                 </td>
             </tr>
         {% else %}
