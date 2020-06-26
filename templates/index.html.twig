@@ -3,9 +3,40 @@
 
 <body>
 <div classe="title">
-	<h1>Bienvenue sur Boobz.com</h1>
+	<h1>Bienvenue sur HACKSURGERY</h1>
 </div>
-	<div id="booking" class="section">
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://media.lesechos.com/api/v1/images/view/5bd1d3158fe56f2040666482/1280x720/2147295-soigner-lhopital-et-ses-finances-178356-1.jpg" alt="prise en charge" width="100%" height="200">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.lamontagne.fr/photoSRC/VVNUJ1paUTgIBhVOCRAHHQ4zRSkXaldfVR5dW1sXVA49/centre-hospitalier-hopital-thiers-vues-illustration_4610494.jpeg" alt="doctor" width="100%" height="200">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn-s-www.republicain-lorrain.fr/images/BE90CAC8-0A07-4B1D-B52D-8EFFDD0E35DD/NW_raw/l-hopital-de-sarrebourg-pourrait-etre-amene-a-accueillir-des-patients-atteints-du-coronavirus-photo-rl-laurent-mami-1584193258.jpg" alt="happinesse" width="100%" height="200">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.chirurgie-esthetique-azencot-bordeaux.fr/wp-content/uploads/clinique-ferrere-chirurgie-medecine-esthetique-docteur-azencot.jpg" alt="happinesse" width="100%" height="200">
+    </div>
+  </div>
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+	<div class="section">
 		<div class="section-center">
 			<div class="container">
 				<div class="row">
@@ -39,7 +70,7 @@
 							
 							<div class="col-md-4">
 								<div class="form-btn">
-									<button class="submit-btn">Recherche</button>
+									<a href="{{ path('soin_index') }}"<button class="submit-btn">Recherche</button></a>
 								</div>
 							</div>
 						</form>

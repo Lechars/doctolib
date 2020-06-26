@@ -5,13 +5,10 @@ h1{
 	justify-content: center;
 }
 
-table{
-	padding-bottom: 200px;
-}
-
 .section {
 	position: relative;
 	height: 100vh;
+	
 	
 }
 
@@ -23,6 +20,7 @@ table{
 	-webkit-transform: translateY(-50%);
 	transform: translateY(-50%);
 	border: #090a0b 2px;
+	background-color: gray;
 }
 
 #booking {
