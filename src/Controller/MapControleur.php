@@ -33,4 +33,5 @@ class MapControleur extends AbstractController
     {
         return $this->render('map/map.html.twig',['hopital'=>$hopital]);
     }
+
 }

@@ -17,7 +17,7 @@
 
     {% for hopi in hopital %}
         <div class="ponctuel" style="display: none;">
-            <a class="label" id="label" target="_blank" href="/map/{{ hopi.id }}">{{ hopi.nom }}</a>
+            <a class="label" id="label" target="_blank" href="/hopital/{{ hopi.id }}">{{ hopi.nom }}</a>
             <div class = "marker" id="marker" title="Marker"></div>
             <div class ="coord">{{ hopi.gps }}</div>
         </div>
