@@ -3,38 +3,71 @@
 {% block title %}Hopital index{% endblock %}
 
 {% block body %}
-    <h1>Description</h1>
+    <div id="demo" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://i.ibb.co/9tWXpdK/5.jpg" alt="health crane" width="100%" height="300">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.ibb.co/dG5B7br/6.jpg" alt="ambulance" width="100%" height="300">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.ibb.co/Jqz9wBS/7.jpg" alt="room" width="100%" height="300">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.ibb.co/StStDXC/8.jpg" alt="happinesse" width="100%" height="300">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+    <h1 style="text-align: center;padding-top: 5%;">Description</h1>
 
 
   <tbody>
         {% for hopital in hopitals %}
 
-    <table class="table">
+    <table class="table container" style=" margin-bottom: 5%; margin-top: 5%;">
         <thead>
             <tr>
-                <th>Nom </th>
-                <td>{{hopital.nom}}</td>
+                <th style="text-align: center;">Nom </th>
+                <td style="text-align: center;">{{hopital.nom}}</td>
             </tr>
 
             <tr>
-                <th>Adresse</th>
-                <td>{{ hopital.adresse }}</td>
+                <th style="text-align: center;">Adresse</th>
+                <td style="text-align: center;">{{ hopital.adresse }}</td>
             </tr>
 
             <tr>
-                <th>Gps</th>
-                <td>{{ hopital.gps }}</td>
+                <th style="text-align: center;">Gps</th>
+                <td style="text-align: center;">{{ hopital.gps }} </td>
             </tr>
 
             <tr>
-                <th>Tarif</th>
-                <td>{{ hopital.tarif }}</td>
+                <th style="text-align: center;">Price</th>
+                <td style="text-align: center;" >{{ hopital.tarif }}$ per night </td>
             </tr>
         </thead>
-       
+       <hr>
            
         {% else %}
-
+        
         {% endfor %}
         </tbody>
     </table>
